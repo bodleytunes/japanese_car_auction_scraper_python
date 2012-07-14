@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "SeleniumTestMain", "SeleniumTestMain.exe", "{6AA9C4EA-0F8D-42E4-AA8D-58BEFACB666C}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+		RemoteMachine = QUADCORE
+		StartingDirectory = F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AA9C4EA-0F8D-42E4-AA8D-58BEFACB666C}.Debug|x86.ActiveCfg = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

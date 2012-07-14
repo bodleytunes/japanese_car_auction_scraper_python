@@ -1,0 +1,163 @@
+
+<!doctype html>
+<head>
+	
+
+</head>
+
+<title>Auctionbase V2.0</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=metanav>
+	<div>
+<a href="http://quadcore:5000/main"><img src="http://www.supercamper.co.uk/skin/frontend/default/default/images/logo.gif" width="587" height="134" /></a>	</div>
+	<form action="" method=post>
+	
+		
+	
+		
+		
+
+	<select name="svselect">
+	{% for vehicle in searchvehicles: %}
+	<option value="{{ vehicle.searchvehicle.id }}">{{vehicle.searchvehicle.make}} {{vehicle.searchvehicle.model}} ({{vehicle.totalvehicles}}) </option>
+  
+  	
+  	{% endfor %}
+  	
+  	</select>
+  	Search for vehicles:
+  <input type=submit name=search value=Search>
+  </form>
+  
+  
+  <form action="" method=post>
+  
+  	
+  
+		
+{% if vehicles %}
+  <div class=total>
+  	<tt>Total Found: {{total}}</tt>
+  </div>
+  
+	
+	{% for vehicle in vehicles: %}
+	<table id="tblvehicles" border="0" background="{{ loop.cycle('#888BA9', '#377BA8') }}">
+		
+	
+  <tr><td>  <h1 class="{{ loop.cycle("row1","row2")}}">Lotnumber : <a href={{vehicle.remoteurl}} target="_blank">{{vehicle.lotNumber}} <title="Click here for remote auction view and more information."></a><h1></td>
+  <tr><td>  <h4 class="{{ loop.cycle("row1","row2")}}">Vehicle Sale Price : <a href={{vehicle.remoteurlfin}} target="_blank">CLICK ME <title="Click here for finish price location!"></a><h4>
+  
+</tr>
+
+ 
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Auction House: {{vehicle.auctionHouse}}</h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Type: {{vehicle.searchVehicle.make}} {{vehicle.searchVehicle.model}}<h4></td></tr>	
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Year: {{vehicle.year}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Chassis Code: {{vehicle.chassis}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Date Found: {{vehicle.searchDay.actualDay}} {{vehicle.searchDay.date}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Search Session: {{vehicle.searchSession_id}} </h4></td></tr>
+  <tr><td> <h2 class="{{ loop.cycle("row1","row2")}}">Add to favourites: <input type=checkbox class="check" name=mark_interest value='{{ vehicle.id }}'> </h2></td></tr>
+  <tr><td> <h2 class="{{ loop.cycle("row1","row2")}}">Flag this vehicle for translation: <input type=checkbox class="check" name=flagTranslation value='{{ vehicle.id }}'> </h2></td></tr>
+  <td><h4 class="{{ loop.cycle("row1","row2")}}"><a href="http://quadcore:5000/individual/{{vehicle.id}}">Detail Page</a> </h4>
+  <a href={{vehicle.imgurl1}}> 	
+  <img src= {{ vehicle.imgurl1}} width="125" height="94" title="Click here for LARGE photo!">
+  </a>
+  
+  <a href={{vehicle.imgurl2}}>
+  <img src= {{ vehicle.imgurl2}} width="125" height="94" title="Click here for LARGE photo!">
+  </a></td>
+  </table>
+  	
+  	{% endfor %}
+  	
+  	
+  	</div>
+  	
+ 
+  
+  <select name="userselect">
+	{% for user in userlist: %}
+	<option value="{{ user.id }}">{{user.username}}</option>
+  
+  	
+  	{% endfor %}
+  	
+  	</select>
+   
+  With selected - Generate Email List:
+  <input type=submit name=favourite value=Create Email>
+  </form>
+  
+  
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}
+
+<script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.swizec.com/code/styledButton/js/jquery.styledButton.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="http://www.swizec.com/code/styledButton/css/styledButton.css">
+<script>
+		$(document).ready( function () {
+			 // this is unfortunately needed due to a race condition in safari
+			 // limit the selector to only what you know will be buttons :)
+			$("span").css({
+				 'padding' : '3px 20px',
+				 'font-size' : '12px',
+			});
+			
+			$("span.makeMeAbutton").styledButton({
+			
+				'orientation' : 'alone', // one of {alone, left, center, right} default is alone
+				
+				// action can be specified as a single function to be fired on any click event
+				'action' : { 
+							'on' :function () {
+								alert( "You've turned on the button" );
+							},
+							'off' : function () {
+								alert( "You've turned it off" );
+							} 
+						},
+				
+				'display' : 'block', // main element's display css, default is inline-block
+				
+				'toggle' : true, // is the button togglable, default is false
+				
+				'role' : 'checkbox', // one of {button, checkbox, select}, default is button. Checkbox/select change some other defaults
+				
+				'checked' : true, // display as a checked checkbox or not, default is false
+				
+				// checkbox values, default are on and off
+				'checkboxValue' : { 
+									'on' : "custom on!",
+									'off' : "custom off!" 
+								},
+				
+				'defaultValue' : "foobar", // default value for select, doubles as default for checkboxValue.on if checkbox, default is empty
+				
+				'name' : 'checkfield', // name to use for hidden input field for checkbox and select so form can submit values
+				
+				// enable a dropdown menu, default is none
+				'dropdown' : {
+						'element' : 'ul' // what nested element to use as dropdown, default is ul
+						}
+						
+				'clear' : false // in firefox 2 the buttons have to be floated to work properly, set this to true to have them display in a new line
+				
+				'border' : 2 // use this if you're using a nonstandard border thicknes
+			});
+		} );
+		
+    
+  
+</script>
+
+
+
+
+

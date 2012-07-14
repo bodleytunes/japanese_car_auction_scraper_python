@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="HtmlListingPages">
+    <Type Name="HtmlListingPage">
+      <Column Member="htmlListingID" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Member="htmlListingData" Type="System.String" CanBeNull="false" />
+      <Association Name="HtmlListing2Group_HtmlListing" Member="HTMLlisting2Group" ThisKey="htmlListingID" OtherKey="HtmlDisplayPageGroupID_fk" Type="HTMLlisting2Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="HTMLlisting2Groups">
+    <Type Name="HTMLlisting2Group">
+      <Column Member="HtmlDisplayPageGroupID_fk" Type="System.Int32" CanBeNull="false" />
+      <Column Member="htmlListingID_fk" Type="System.Int32" CanBeNull="false" />
+      <Column Member="HtmlPageGroup2ListingID_pk" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HtmlListing2Group_HtmlListing" Member="HtmlListingPages" ThisKey="HtmlDisplayPageGroupID_fk" OtherKey="htmlListingID" Type="HtmlListingPage" />
+      <Association Name="HTMLlisting2Group_HtmlListingPageGroup" Member="HtmlListingPageGroups" ThisKey="HtmlDisplayPageGroupID_fk" OtherKey="htmlDisplayPageGroupID" Type="HtmlListingPageGroup" />
+    </Type>
+  </Table>
+  <Table Name="" Member="HtmlListingPageGroups">
+    <Type Name="HtmlListingPageGroup">
+      <Column Member="htmlDisplayPageGroupID" AutoSync="Never" Type="System.Int32" IsDbGenerated="true" CanBeNull="false" />
+      <Column Member="VehicleMake" Type="System.String" CanBeNull="false" />
+      <Column Member="VehicleModel" Type="System.String" CanBeNull="false" />
+      <Column Member="TimeStamp" AutoSync="Never" Type="System.DateTime" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HTMLlisting2Group_HtmlListingPageGroup" Member="HTMLlisting2Group" ThisKey="htmlDisplayPageGroupID" OtherKey="HtmlDisplayPageGroupID_fk" Type="HTMLlisting2Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

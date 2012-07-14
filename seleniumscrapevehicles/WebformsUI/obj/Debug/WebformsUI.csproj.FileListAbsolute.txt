@@ -1,0 +1,7 @@
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\bin\WebformsUI.dll
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\bin\WebformsUI.pdb
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\obj\Debug\WebformsUI.dll
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\obj\Debug\WebformsUI.pdb
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\bin\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumtestmain\WebformsUI\bin\DomainWideObjects.pdb

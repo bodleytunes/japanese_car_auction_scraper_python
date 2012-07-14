@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AuctionBaseNeoModelUIStoreContainer" CdmEntityContainer="AuctionBaseNeoEntitiesUI">
+    <EntitySetMapping Name="auction_vehicle">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.auction_vehicle">
+        <MappingFragment StoreEntitySet="auction_vehicle">
+          <ScalarProperty Name="auction_vehicle_id_pk" ColumnName="auction_vehicle_id_pk" />
+          <ScalarProperty Name="auction_vehicle_auctionHouse" ColumnName="auction_vehicle_auctionHouse" />
+          <ScalarProperty Name="auction_vehicle_lot" ColumnName="auction_vehicle_lot" />
+          <ScalarProperty Name="auction_vehicle_date" ColumnName="auction_vehicle_date" />
+          <ScalarProperty Name="auction_vehicle_year" ColumnName="auction_vehicle_year" />
+          <ScalarProperty Name="auction_vehicle_engine" ColumnName="auction_vehicle_engine" />
+          <ScalarProperty Name="auction_vehicle_chassis" ColumnName="auction_vehicle_chassis" />
+          <ScalarProperty Name="auction_vehicle_equip" ColumnName="auction_vehicle_equip" />
+          <ScalarProperty Name="auction_vehicle_mileage" ColumnName="auction_vehicle_mileage" />
+          <ScalarProperty Name="auction_vehicle_condition" ColumnName="auction_vehicle_condition" />
+          <ScalarProperty Name="auction_vehicle_start_bid" ColumnName="auction_vehicle_start_bid" />
+          <ScalarProperty Name="auction_vehicle_end_bid" ColumnName="auction_vehicle_end_bid" />
+          <ScalarProperty Name="auction_vehicle_status" ColumnName="auction_vehicle_status" />
+          <ScalarProperty Name="auction_vehicle_model_id_fk" ColumnName="auction_vehicle_model_id_fk" />
+          <ScalarProperty Name="auction_vehicle_imageset_id_fk" ColumnName="auction_vehicle_imageset_id_fk" />
+          <ScalarProperty Name="auction_vehicle_scrape_date" ColumnName="auction_vehicle_scrape_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="auction_vehicle_imageset">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.auction_vehicle_imageset">
+        <MappingFragment StoreEntitySet="auction_vehicle_imageset">
+          <ScalarProperty Name="imageset_id_pk" ColumnName="imageset_id_pk" />
+          <ScalarProperty Name="imageset_url_local1" ColumnName="imageset_url_local1" />
+          <ScalarProperty Name="imageset_url_local2" ColumnName="imageset_url_local2" />
+          <ScalarProperty Name="imageset_url_local3" ColumnName="imageset_url_local3" />
+          <ScalarProperty Name="imageset_url_remote1" ColumnName="imageset_url_remote1" />
+          <ScalarProperty Name="imageset_url_remote2" ColumnName="imageset_url_remote2" />
+          <ScalarProperty Name="imageset_url_remote3" ColumnName="imageset_url_remote3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="auction_vehicle_make">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.auction_vehicle_make">
+        <MappingFragment StoreEntitySet="auction_vehicle_make">
+          <ScalarProperty Name="auction_vehicle_make_id_pk" ColumnName="auction_vehicle_make_id_pk" />
+          <ScalarProperty Name="auction_vehicle_make1" ColumnName="auction_vehicle_make" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="auction_vehicle_model">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.auction_vehicle_model">
+        <MappingFragment StoreEntitySet="auction_vehicle_model">
+          <ScalarProperty Name="auction_vehicle_model_id_pk" ColumnName="auction_vehicle_model_id_pk" />
+          <ScalarProperty Name="auction_vehicle_model1" ColumnName="auction_vehicle_model" />
+          <ScalarProperty Name="auction_vehicle_make_id_fk" ColumnName="auction_vehicle_make_id_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_main_with_url_local">
+      <EntityTypeMapping TypeName="AuctionBaseNeoModelUI.vw_main_with_url_local">
+        <MappingFragment StoreEntitySet="vw_main_with_url_local">
+          <ScalarProperty Name="id_pk" ColumnName="id_pk" />
+          <ScalarProperty Name="make" ColumnName="make" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="lot" ColumnName="lot" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="engine" ColumnName="engine" />
+          <ScalarProperty Name="chassis" ColumnName="chassis" />
+          <ScalarProperty Name="equip" ColumnName="equip" />
+          <ScalarProperty Name="mileage" ColumnName="mileage" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="startbid" ColumnName="startbid" />
+          <ScalarProperty Name="endbid" ColumnName="endbid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="localurl1" ColumnName="localurl1" />
+          <ScalarProperty Name="localurl2" ColumnName="localurl2" />
+          <ScalarProperty Name="localurl3" ColumnName="localurl3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

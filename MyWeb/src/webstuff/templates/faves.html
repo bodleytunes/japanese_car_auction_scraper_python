@@ -1,0 +1,41 @@
+
+<!doctype html>
+<head>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<title>Auctionbase V2.0 Index</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=metanav>
+	<div>
+<a href="http://quadcore:5000/main"><img src="http://www.supercamper.co.uk/skin/frontend/default/default/images/logo.gif" width="587" height="134" /></a>	</div>
+	<form action="" method=post>
+	
+		
+{% if days %}
+ 
+    
+	<select name="dayselect">
+	{% for day in days: %}
+	
+	<option value="{{ day.day.id }}">{{day.day.actualDay}} {{day.day.date}} Total ({{counts[loop.index - 1]}})</option>
+    
+  	
+  	{% endfor %}
+  	
+  	</select>
+ 
+  	
+  	
+  
+  	
+ 
+  Lookup Favourites:
+  <input type=submit value=Search>
+  </form>
+  
+  	
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}

@@ -1,0 +1,100 @@
+
+<!doctype html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.style1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: xx-small;
+}
+</style>
+</head>
+
+
+<title>Auctionbase V2.0</title>
+
+<div class=metanav>
+	<div>
+<a href="http://quadcore:5000/main"><img src="http://www.supercamper.co.uk/skin/frontend/default/default/images/logo.gif" width="587" height="134" /></a>	</div>
+	<form action="" method=post>
+	
+
+  	
+  
+		
+{% if vehicles %}
+  <div class=total>
+  	<tt>Total Found: {{total}}</tt>
+  </div>
+  
+	
+	{% for vehicle in vehicles: %}
+	<table id="tblvehicles" border="0.5" width="800" background="{{ loop.cycle('#888BA9', '#377BA8') }}">
+		
+	
+  <tr><td width="800" height="50"> <h1>Lotnumber : <a href={{vehicle.remoteurl}} target="_blank">{{vehicle.lotNumber}} <title="Click here for remote auction view and more information."></a><h1></td>
+  <tr><td width="800" height="50"> <h4 class="{{ loop.cycle("row1","row2")}}">Vehicle Sale Price : <a href={{vehicle.remoteurlfin}} target="_blank">CLICK ME <title="Click here for finish price location!"></a><h4>
+  
+</tr>
+
+ 
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Auction House: {{vehicle.auctionHouse}}</h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Type: {{vehicle.searchVehicle.make}} {{vehicle.searchVehicle.model}}<h4></td></tr>	
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Year: {{vehicle.year}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Chassis Code: {{vehicle.chassis}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Date Found: {{vehicle.searchDay.actualDay}} {{vehicle.searchDay.date}}<h4></td></tr>
+  <tr><td><h4 class="{{ loop.cycle("row1","row2")}}">Search Session: {{vehicle.searchSession_id}} </h4></td></tr>
+  </table>
+  <table border="5">
+  <td>
+  <a href={{vehicle.imgurl1}}> 	
+  <img src= {{ vehicle.imgurl1}} width="125" height="94" title="Click here for LARGE photo!">
+  </a>
+  
+  <a href={{vehicle.imgurl2}}>
+  <img src= {{ vehicle.imgurl2}} width="125" height="94" title="Click here for LARGE photo!">
+  </a></td></table>
+
+  	
+  	{% endfor %}
+  	
+  	
+  	</div>
+  	
+
+   
+  
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}
+
+
+
+<script>
+
+
+$(":checkbox").change(function() {
+    $(this).closest("h2").toggleClass("highlight", this.checked).change();
+});
+
+$("#tblvehicles h2").click(function() {
+	$(this).closest("h2").toggleClass("highlight", this.checked).change();
+   
+});
+
+$("#tblvehicles h2").click(function() {
+	$(this).find(".check").attr("checked", checked, true);
+    $(":checkbox", this).trigger("click");
+ 
+ }); 
+    
+  
+</script>
+
+
+
+
+

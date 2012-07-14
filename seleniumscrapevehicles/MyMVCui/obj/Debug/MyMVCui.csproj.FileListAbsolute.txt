@@ -1,0 +1,32 @@
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\MyMVCui.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\MyMVCui.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\CommonServiceLocator.NinjectAdapter.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\EntityFramework.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\WebActivator.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\CommonServiceLocator.NinjectAdapter.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\EntityFramework.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\MyMVCui.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\MyMVCui.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\MyMVCui.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\MyMVCui.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\CommonServiceLocator.NinjectAdapter.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\EntityFramework.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\WebActivator.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\CommonServiceLocator.NinjectAdapter.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\EntityFramework.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\bin\Ninject.Web.Mvc.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\ResolveAssemblyReference.cache
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\MyMVCui.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\MyMVCui\obj\Debug\MyMVCui.pdb

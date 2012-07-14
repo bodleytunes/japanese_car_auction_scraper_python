@@ -1,0 +1,12 @@
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\DomainWideObjects.dll.config
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\DomainWideObjects.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Release\ResolveAssemblyReference.cache
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Release\DomainWideObjects.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Release\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Bson.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Driver.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Bson.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Bson.xml
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Driver.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Release\MongoDB.Driver.xml

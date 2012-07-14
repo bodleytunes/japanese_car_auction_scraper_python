@@ -1,0 +1,47 @@
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+H:\SeleniumTest\seleniumtestmain\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumtestmain\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll.config
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Bson.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Driver.dll
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Bson.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Bson.xml
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Driver.pdb
+C:\AuctionScraper\seleniumscrapevehicles\DomainWideObjects\bin\Debug\MongoDB.Driver.xml

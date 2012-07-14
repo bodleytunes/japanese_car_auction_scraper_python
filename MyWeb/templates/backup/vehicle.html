@@ -1,0 +1,69 @@
+
+<!doctype html>
+<head>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<title>Auctionbase V2.0</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=metanav>
+	<div>
+		<img src="http://www.supercamper.co.uk/skin/frontend/default/default/images/logo.gif" width="587" height="134" />
+	</div>
+	<form action="" method=post>
+	<table>
+		
+{% if vehicles %}
+  <div class=total>
+  	<tt>Total Found: {{total}}</tt>
+  </div>
+  
+	
+	{% for vehicle in vehicles: %}
+	
+  <tr>  <h1>Lotnumber : <a href={{vehicle.remoteurl}} target="_blank">{{vehicle.lotNumber}} <title="Click here for remote auction view and more information."></a><h1>
+</tr>
+
+ 
+  <tr><h4>Auction House: {{vehicle.auctionHouse}}<h4></tr>
+  <tr><h4>Type: {{vehicle.searchVehicle.make}} {{vehicle.searchVehicle.model}}<h4></tr>	
+  <tr><h4>Year: {{vehicle.year}}<h4></tr>
+  <tr><h4>Chassis Code: {{vehicle.chassis}}<h4></tr>
+  <tr><h4>Date Found: {{vehicle.searchDay.actualDay}} {{vehicle.searchDay.date}}<h4></tr>
+  <tr><h4>Search Session: {{vehicle.searchSession_id}} </h4></tr>
+  <tr><h2>Mark for send: <input type=checkbox name=mark_interest value='{{ vehicle.id }}'></h2></tr>
+  <h4><a href="http://quadcore:5000/individual/{{vehicle.id}}">Detail Page</a> </h4>
+  <a href={{vehicle.imgurl1}}> 	
+  <img src= {{ vehicle.imgurl1}} width="125" height="94" title="Click here for LARGE photo!">
+  </a>
+  
+  <a href={{vehicle.imgurl2}}>
+  <img src= {{ vehicle.imgurl2}} width="125" height="94" title="Click here for LARGE photo!">
+  </a>
+  
+  	
+  	{% endfor %}
+  	
+  	
+  	</div>
+  	
+  </table>	
+  
+  <select name="userselect">
+	{% for user in userlist: %}
+	<option value="{{ user.id }}">{{user.username}}</option>
+  
+  	
+  	{% endfor %}
+  	
+  	</select>
+   
+  With selected - Generate Email List:
+  <input type=submit value=Create Email>
+  </form>
+  
+  
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}

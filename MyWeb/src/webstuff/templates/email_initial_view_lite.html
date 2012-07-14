@@ -1,0 +1,75 @@
+
+<!doctype html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.style1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: xx-small;
+}
+</style>
+</head>
+
+
+<title>Auctionbase V2.0</title>
+
+<div class=metanav>
+	<div>
+<form action="" method=post>
+	
+{% if vehicles %}
+  <div class=total>
+  	<tt>Total Found: {{total}}</tt>
+  </div>
+  
+	{% for vehicle in vehicles: %}
+	<table id="tblvehicles" width="800" background="{{ loop.cycle('#888BA9', '#377BA8') }}">
+		 <tr><td width="800" height="35"> <h1>Lotnumber : <a href={{vehicle.remoteurl}} target="_blank">{{vehicle.lotNumber}} <title="Click here for remote auction view and more information."></a><h1></td>
+ <td>
+  <a href={{vehicle.imgurl1}}> 	
+  <img src= {{ vehicle.imgurl1}} width="125" height="94" title="Click here for LARGE photo!">
+  </a>
+  
+  <a href={{vehicle.imgurl2}}>
+  <img src= {{ vehicle.imgurl2}} width="125" height="94" title="Click here for LARGE photo!">
+  </a></td></table>	
+  	{% endfor %}
+  	</div>
+  	
+
+   
+  
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}
+
+
+
+<script>
+
+
+$(":checkbox").change(function() {
+    $(this).closest("h2").toggleClass("highlight", this.checked).change();
+});
+
+$("#tblvehicles h2").click(function() {
+	$(this).closest("h2").toggleClass("highlight", this.checked).change();
+   
+});
+
+$("#tblvehicles h2").click(function() {
+	$(this).find(".check").attr("checked", checked, true);
+    $(":checkbox", this).trigger("click");
+ 
+ }); 
+    
+  
+</script>
+
+
+
+
+

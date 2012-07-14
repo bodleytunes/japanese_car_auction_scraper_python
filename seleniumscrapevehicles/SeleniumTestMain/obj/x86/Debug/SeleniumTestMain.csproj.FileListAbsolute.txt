@@ -1,0 +1,174 @@
+c:\users\jon.jmc\documents\visual studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Castle.Core.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Castle.Core.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+H:\seleniumTest\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+H:\seleniumTest\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+H:\seleniumTest\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+H:\seleniumTest\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+H:\seleniumTest\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+H:\seleniumTest\SeleniumTestMain\bin\Debug\nunit.framework.dll
+H:\seleniumTest\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+H:\seleniumTest\SeleniumTestMain\bin\Debug\nunit.framework.xml
+H:\seleniumTest\SeleniumTestMain\bin\Debug\WebDriver.pdb
+H:\seleniumTest\SeleniumTestMain\bin\Debug\WebDriver.xml
+H:\seleniumTest\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+H:\seleniumTest\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+H:\seleniumTest\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\nunit.framework.dll
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\nunit.framework.xml
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\WebDriver.pdb
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\WebDriver.xml
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+H:\SeleniumTest\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Castle.Core.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Webdriver.Support.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+C:\Users\jon.JMC\seleniumtestmain\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebActivator.dll
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+C:\Users\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ionic.Zip.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebActivator.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.dll
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ionic.Zip.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\ThoughtWorks.Selenium.Core.xml
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+F:\Documents and Settings\jon.JMC\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.config
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ionic.Zip.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebActivator.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ionic.Zip.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Newtonsoft.Json.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\Ninject.Web.Mvc.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe.manifest
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\SeleniumTestMain.application
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Bson.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Driver.dll
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Bson.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Bson.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Driver.pdb
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\bin\Debug\MongoDB.Driver.xml
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe.manifest
+C:\AuctionScraper\seleniumscrapevehicles\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.application

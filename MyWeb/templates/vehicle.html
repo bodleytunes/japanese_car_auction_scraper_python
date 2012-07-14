@@ -1,0 +1,79 @@
+
+<!doctype html>
+<head>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<title>Auctionbase V2.0</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=metanav>
+	<div>
+		<img src="http://www.supercamper.co.uk/skin/frontend/default/default/images/logo.gif" width="587" height="134" />
+	</div>
+	<form action="" method=post>
+	<table>
+		
+{% if vehicles %}
+  <div class=total>
+  	<tt>Total Found: {{total}}</tt>
+  </div>
+  
+	
+	{% for vehicle in vehicles|batch(4, '&nbsp;') %}
+	
+  <tr>
+      {% for column in vehicle %}
+        <td>      <h1>Lotnumber : <a href={{column.remoteurl}} target="_blank">{{column.lotNumber}} <title>="Click here for remote auction view and more information."></title></a></h1>
+ </td>
+
+      <h4>Auction House: {{column.auctionHouse}}</h4></td>
+
+
+       <td> <h4>Year: {{column.year}}</h4> </td><br>
+
+      <td><h4>Chassis Code: {{column.chassis}}<h4></td><br>
+
+      <td>  <h2>Mark for send: <input type=checkbox name=mark_interest value='{{ column.id }}'></h2></td>
+      <td>  <h4><a href="http://quadcore:5000/individual/{{column.id}}">Detail Page</a> </h4></td>
+      <td>  <a href={{column.imgurl1}}>
+            <img src= {{ column.imgurl1}} width="125" height="94" title="Click here for LARGE photo!">
+        </a></td>
+
+      <td>  <a href={{column.imgurl2}}>
+            <img src= {{column.imgurl2}} width="125" height="94" title="Click here for LARGE photo!">
+        </a></td>
+
+
+
+            {% endfor %}
+
+        </h4>
+  </tr>
+
+ 
+
+  	{% endfor %}
+  	
+  	
+  	</div>
+  	
+  </table>	
+  
+  <select name="userselect">
+	{% for user in userlist: %}
+	<option value="{{ user.id }}">{{user.username}}</option>
+  
+  	
+  	{% endfor %}
+  	
+  	</select>
+   
+  With selected - Generate Email List:
+  <input type=submit value=Create Email>
+  </form>
+  
+  
+
+  
+{% else %}
+  <h1>Sorry, no vehicles found.</h1>
+{% endif %}

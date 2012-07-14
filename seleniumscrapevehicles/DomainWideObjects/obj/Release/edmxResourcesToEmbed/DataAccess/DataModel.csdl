@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="DataModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HTMLlists" EntityType="DataModel.HTMLlist" />
+    <EntitySet Name="HTMLpages" EntityType="DataModel.HTMLpage" />
+    <EntitySet Name="ListGroups" EntityType="DataModel.ListGroup" />
+    <AssociationSet Name="Page2ListList" Association="DataModel.Page2ListList">
+      <End Role="Page2List" EntitySet="ListGroups" />
+      <End Role="List" EntitySet="HTMLlists" />
+    </AssociationSet>
+    <AssociationSet Name="PagePage2List" Association="DataModel.PagePage2List">
+      <End Role="Page" EntitySet="HTMLpages" />
+      <End Role="Page2List" EntitySet="ListGroups" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HTMLlist">
+    <Key>
+      <PropertyRef Name="ListId" />
+    </Key>
+    <Property Type="Int32" Name="ListId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ListHtml" Nullable="false" />
+    <NavigationProperty Name="Page2List" Relationship="DataModel.Page2ListList" FromRole="List" ToRole="Page2List" />
+  </EntityType>
+  <EntityType Name="HTMLpage">
+    <Key>
+      <PropertyRef Name="PageID" />
+    </Key>
+    <Property Type="Int32" Name="PageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Page2List" Relationship="DataModel.PagePage2List" FromRole="Page" ToRole="Page2List" />
+    <Property Type="String" Name="VehicleModel" Nullable="false" />
+    <Property Type="String" Name="VehicleMake" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ListGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <NavigationProperty Name="Lists" Relationship="DataModel.Page2ListList" FromRole="Page2List" ToRole="List" />
+    <NavigationProperty Name="Pages" Relationship="DataModel.PagePage2List" FromRole="Page2List" ToRole="Page" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+  </EntityType>
+  <Association Name="Page2ListList">
+    <End Type="DataModel.ListGroup" Role="Page2List" Multiplicity="1" />
+    <End Type="DataModel.HTMLlist" Role="List" Multiplicity="*" />
+  </Association>
+  <Association Name="PagePage2List">
+    <End Type="DataModel.HTMLpage" Role="Page" Multiplicity="1" />
+    <End Type="DataModel.ListGroup" Role="Page2List" Multiplicity="1" />
+  </Association>
+</Schema>

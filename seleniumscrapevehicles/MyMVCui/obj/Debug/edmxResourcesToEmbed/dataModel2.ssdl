@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AuctionBaseNeoModelUI.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AuctionBaseNeoModelUIStoreContainer">
+    <EntitySet Name="auction_vehicle" EntityType="AuctionBaseNeoModelUI.Store.auction_vehicle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="auction_vehicle_imageset" EntityType="AuctionBaseNeoModelUI.Store.auction_vehicle_imageset" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="auction_vehicle_make" EntityType="AuctionBaseNeoModelUI.Store.auction_vehicle_make" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="auction_vehicle_model" EntityType="AuctionBaseNeoModelUI.Store.auction_vehicle_model" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="AuctionBaseNeoModelUI.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vw_main_with_url_local" EntityType="AuctionBaseNeoModelUI.Store.vw_main_with_url_local" store:Type="Views" store:Schema="dbo" store:Name="vw_main_with_url_local">
+      <DefiningQuery>SELECT 
+      [vw_main_with_url_local].[id_pk] AS [id_pk], 
+      [vw_main_with_url_local].[make] AS [make], 
+      [vw_main_with_url_local].[model] AS [model], 
+      [vw_main_with_url_local].[lot] AS [lot], 
+      [vw_main_with_url_local].[date] AS [date], 
+      [vw_main_with_url_local].[year] AS [year], 
+      [vw_main_with_url_local].[engine] AS [engine], 
+      [vw_main_with_url_local].[chassis] AS [chassis], 
+      [vw_main_with_url_local].[equip] AS [equip], 
+      [vw_main_with_url_local].[mileage] AS [mileage], 
+      [vw_main_with_url_local].[condition] AS [condition], 
+      [vw_main_with_url_local].[startbid] AS [startbid], 
+      [vw_main_with_url_local].[endbid] AS [endbid], 
+      [vw_main_with_url_local].[status] AS [status], 
+      [vw_main_with_url_local].[localurl1] AS [localurl1], 
+      [vw_main_with_url_local].[localurl2] AS [localurl2], 
+      [vw_main_with_url_local].[localurl3] AS [localurl3]
+      FROM [dbo].[vw_main_with_url_local] AS [vw_main_with_url_local]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_auction_vehicle_auction_vehicle_imageset" Association="AuctionBaseNeoModelUI.Store.FK_auction_vehicle_auction_vehicle_imageset">
+      <End Role="auction_vehicle_imageset" EntitySet="auction_vehicle_imageset" />
+      <End Role="auction_vehicle" EntitySet="auction_vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_auction_vehicle_auction_vehicle_model" Association="AuctionBaseNeoModelUI.Store.FK_auction_vehicle_auction_vehicle_model">
+      <End Role="auction_vehicle_model" EntitySet="auction_vehicle_model" />
+      <End Role="auction_vehicle" EntitySet="auction_vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_auction_vehicle_model_auction_vehicle_make" Association="AuctionBaseNeoModelUI.Store.FK_auction_vehicle_model_auction_vehicle_make">
+      <End Role="auction_vehicle_make" EntitySet="auction_vehicle_make" />
+      <End Role="auction_vehicle_model" EntitySet="auction_vehicle_model" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="auction_vehicle">
+    <Key>
+      <PropertyRef Name="auction_vehicle_id_pk" />
+    </Key>
+    <Property Name="auction_vehicle_id_pk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="auction_vehicle_auctionHouse" Type="nchar" MaxLength="50" />
+    <Property Name="auction_vehicle_lot" Type="int" />
+    <Property Name="auction_vehicle_date" Type="nchar" MaxLength="10" />
+    <Property Name="auction_vehicle_year" Type="int" />
+    <Property Name="auction_vehicle_engine" Type="nchar" MaxLength="10" />
+    <Property Name="auction_vehicle_chassis" Type="nvarchar" MaxLength="50" />
+    <Property Name="auction_vehicle_equip" Type="nvarchar" MaxLength="50" />
+    <Property Name="auction_vehicle_mileage" Type="int" />
+    <Property Name="auction_vehicle_condition" Type="nchar" MaxLength="10" />
+    <Property Name="auction_vehicle_start_bid" Type="int" />
+    <Property Name="auction_vehicle_end_bid" Type="int" />
+    <Property Name="auction_vehicle_status" Type="nchar" MaxLength="30" />
+    <Property Name="auction_vehicle_model_id_fk" Type="int" />
+    <Property Name="auction_vehicle_imageset_id_fk" Type="int" />
+    <Property Name="auction_vehicle_scrape_date" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="auction_vehicle_imageset">
+    <Key>
+      <PropertyRef Name="imageset_id_pk" />
+    </Key>
+    <Property Name="imageset_id_pk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="imageset_url_local1" Type="nvarchar" MaxLength="150" />
+    <Property Name="imageset_url_local2" Type="nvarchar" MaxLength="150" />
+    <Property Name="imageset_url_local3" Type="nvarchar" MaxLength="150" />
+    <Property Name="imageset_url_remote1" Type="nvarchar" MaxLength="150" />
+    <Property Name="imageset_url_remote2" Type="nvarchar" MaxLength="150" />
+    <Property Name="imageset_url_remote3" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="auction_vehicle_make">
+    <Key>
+      <PropertyRef Name="auction_vehicle_make_id_pk" />
+    </Key>
+    <Property Name="auction_vehicle_make_id_pk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="auction_vehicle_make" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="auction_vehicle_model">
+    <Key>
+      <PropertyRef Name="auction_vehicle_model_id_pk" />
+    </Key>
+    <Property Name="auction_vehicle_model_id_pk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="auction_vehicle_model" Type="nchar" MaxLength="30" />
+    <Property Name="auction_vehicle_make_id_fk" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AuctionBaseNeo.dbo.vw_main_with_url_local' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vw_main_with_url_local">
+    <Key>
+      <PropertyRef Name="id_pk" />
+    </Key>
+    <Property Name="id_pk" Type="int" Nullable="false" />
+    <Property Name="make" Type="nchar" MaxLength="30" />
+    <Property Name="model" Type="nchar" MaxLength="30" />
+    <Property Name="lot" Type="int" />
+    <Property Name="date" Type="nchar" MaxLength="10" />
+    <Property Name="year" Type="int" />
+    <Property Name="engine" Type="nchar" MaxLength="10" />
+    <Property Name="chassis" Type="nvarchar" MaxLength="50" />
+    <Property Name="equip" Type="nvarchar" MaxLength="50" />
+    <Property Name="mileage" Type="int" />
+    <Property Name="condition" Type="nchar" MaxLength="10" />
+    <Property Name="startbid" Type="int" />
+    <Property Name="endbid" Type="int" />
+    <Property Name="status" Type="nchar" MaxLength="10" />
+    <Property Name="localurl1" Type="nvarchar" MaxLength="150" />
+    <Property Name="localurl2" Type="nvarchar" MaxLength="150" />
+    <Property Name="localurl3" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <Association Name="FK_auction_vehicle_auction_vehicle_imageset">
+    <End Role="auction_vehicle_imageset" Type="AuctionBaseNeoModelUI.Store.auction_vehicle_imageset" Multiplicity="0..1" />
+    <End Role="auction_vehicle" Type="AuctionBaseNeoModelUI.Store.auction_vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="auction_vehicle_imageset">
+        <PropertyRef Name="imageset_id_pk" />
+      </Principal>
+      <Dependent Role="auction_vehicle">
+        <PropertyRef Name="auction_vehicle_imageset_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_auction_vehicle_auction_vehicle_model">
+    <End Role="auction_vehicle_model" Type="AuctionBaseNeoModelUI.Store.auction_vehicle_model" Multiplicity="0..1" />
+    <End Role="auction_vehicle" Type="AuctionBaseNeoModelUI.Store.auction_vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="auction_vehicle_model">
+        <PropertyRef Name="auction_vehicle_model_id_pk" />
+      </Principal>
+      <Dependent Role="auction_vehicle">
+        <PropertyRef Name="auction_vehicle_model_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_auction_vehicle_model_auction_vehicle_make">
+    <End Role="auction_vehicle_make" Type="AuctionBaseNeoModelUI.Store.auction_vehicle_make" Multiplicity="0..1" />
+    <End Role="auction_vehicle_model" Type="AuctionBaseNeoModelUI.Store.auction_vehicle_model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="auction_vehicle_make">
+        <PropertyRef Name="auction_vehicle_make_id_pk" />
+      </Principal>
+      <Dependent Role="auction_vehicle_model">
+        <PropertyRef Name="auction_vehicle_make_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

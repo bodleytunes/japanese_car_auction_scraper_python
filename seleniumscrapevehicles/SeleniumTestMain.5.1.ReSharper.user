@@ -1,0 +1,52 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="DataModelContainer`0" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="DataAccess" priority="0" />
+      <Item value="seleniumScrapeEntities`0" priority="0" />
+      <Item value="ctx" priority="1" />
+      <Item value="htmlListObject" priority="0" />
+      <Item value="tblHtml`0" priority="2" />
+      <Item value="html_data" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DomainWideObjects.DataAccess.seleniumScrapeEntities">
+      <Item value="AddObject`0" priority="1" />
+      <Item value="tblHtmls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="AddObject`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/d:DataAccess/f:DataModel1.Designer.cs" caret="1538" fromTop="11" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="1317" fromTop="14" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/d:DataAccess/f:CreateHtmlList.cs" caret="552" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/d:DataAccess/f:CreateHtmlList.cs" caret="90" fromTop="4" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/d:DataAccess/f:CreateHtmlList.cs" caret="476" fromTop="13" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="1224" fromTop="18" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="1408" fromTop="21" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/d:DataAccess/f:CreateHtmlList.cs" caret="644" fromTop="11" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

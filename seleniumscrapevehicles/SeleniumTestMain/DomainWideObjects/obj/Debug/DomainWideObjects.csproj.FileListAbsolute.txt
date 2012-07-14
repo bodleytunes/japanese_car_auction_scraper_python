@@ -1,0 +1,10 @@
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\DomainWideObjects\obj\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\DomainWideObjects\obj\Debug\DomainWideObjects.pdb

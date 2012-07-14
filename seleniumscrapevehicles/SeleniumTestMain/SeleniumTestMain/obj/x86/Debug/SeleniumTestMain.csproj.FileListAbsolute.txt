@@ -1,0 +1,36 @@
+c:\users\jon.jmc\documents\visual studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Castle.Core.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\Webdriver.Support.xml
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\Documents\Visual Studio 2010\Projects\SeleniumTestMain\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\SeleniumTestMain.exe
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\SeleniumTestMain.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Castle.Core.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\DomainWideObjects.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\nunit.framework.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.dll
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\DomainWideObjects.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\nunit.framework.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\WebDriver.xml
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.pdb
+C:\Users\jon.JMC\seleniumScrape\SeleniumTestMain\bin\Debug\Webdriver.Support.xml

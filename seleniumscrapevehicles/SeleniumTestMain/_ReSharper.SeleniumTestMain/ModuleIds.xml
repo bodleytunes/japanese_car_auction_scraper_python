@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="597152A6-A313-4756-8701-CC7452AEC3C2" ModuleId="SeleniumTestMain" />
+  <Module PersistentId="CD513CE6-3A30-412A-947B-E86B11F4C5E8" ModuleId="DomainWideObjects" />
+  <Module PersistentId="6E0BC8C5-2F2B-4709-A218-75FBA2CF1748" ModuleId="TestProject" />
+  <Module PersistentId="DE36283D-5C73-47BC-B391-E9FA699EF23C" ModuleId="Test1" />
+</Modules>

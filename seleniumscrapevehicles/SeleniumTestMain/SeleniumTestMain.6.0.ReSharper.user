@@ -1,0 +1,245 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="DE36283D-5C73-47BC-B391-E9FA699EF23C/f:Class1.cs" caret="789" fromTop="18" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/f:Program.cs" caret="264" fromTop="11" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:IDataScraper.cs" caret="168" fromTop="7" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/f:Main.cs" caret="1103" fromTop="11" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:VehicleSelector.cs" caret="1884" fromTop="0" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="556" fromTop="7" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:IVehicleSelector.cs" caret="154" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Authenticator.cs" caret="410" fromTop="0" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/f:Website.cs" caret="295" fromTop="11" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/f:IAuthenticatable.cs" caret="164" fromTop="7" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/f:ISiteConfigurable.cs" caret="0" fromTop="0" />
+      <File id="CD513CE6-3A30-412A-947B-E86B11F4C5E8/f:SiteConfig.cs" caret="13" fromTop="0" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2251" fromTop="7" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="18" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="15" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="15" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/f:Main.cs" caret="1166" fromTop="18" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:IVehicleSelector.cs" caret="140" fromTop="6" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:IDataScraper.cs" caret="184" fromTop="9" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="7" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="9" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:VehicleSelector.cs" caret="559" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="14" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="980" fromTop="4" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:VehicleSelector.cs" caret="688" fromTop="0" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="8" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="8" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="9" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="7" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="14" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2502" fromTop="9" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2499" fromTop="12" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2503" fromTop="14" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="1598" fromTop="6" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2368" fromTop="10" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2385" fromTop="5" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/d:Data/f:DataScraper.cs" caret="653" fromTop="8" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2101" fromTop="14" />
+      <File id="597152A6-A313-4756-8701-CC7452AEC3C2/d:General/f:Navigator.cs" caret="2283" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="private" priority="127" />
+      <Item value="public" priority="479" />
+      <Item value="string" priority="607" />
+      <Item value="IAuthenticatable`0" priority="31" />
+      <Item value="using" priority="371" />
+      <Item value="void" priority="255" />
+      <Item value="DomainWideObjects" priority="92" />
+      <Item value="SiteConfigurator`0" priority="63" />
+      <Item value="new" priority="352" />
+      <Item value="SiteConfigurator" priority="28" />
+      <Item value="siteConfig" priority="63" />
+      <Item value="this" priority="223" />
+      <Item value="webSite" priority="31" />
+      <Item value="username" priority="31" />
+      <Item value="password" priority="31" />
+      <Item value="Website`0" priority="191" />
+      <Item value="website" priority="223" />
+      <Item value="Website" priority="28" />
+      <Item value="SeleniumTestMain" priority="62" />
+      <Item value="Authenticator`0" priority="63" />
+      <Item value="IWebDriver`0" priority="186" />
+      <Item value="driver" priority="831" />
+      <Item value="by" priority="95" />
+      <Item value="By`0" priority="639" />
+      <Item value="Navigator`0" priority="63" />
+      <Item value="Navigator" priority="28" />
+      <Item value="navigator" priority="127" />
+      <Item value="Main`0" priority="31" />
+      <Item value="Main" priority="28" />
+      <Item value="main" priority="31" />
+      <Item value="IVehicleSelector`0" priority="95" />
+      <Item value="VehicleSelector`0" priority="31" />
+      <Item value="checked" priority="31" />
+      <Item value="Debug`0" priority="31" />
+      <Item value="Console`0" priority="575" />
+      <Item value="isMakePresent" priority="63" />
+      <Item value="VehicleSelector" priority="28" />
+      <Item value="vehicleSelector" priority="127" />
+      <Item value="Microsoft" priority="30" />
+      <Item value="Selenium" priority="152" />
+      <Item value="IsElementPresent`0" priority="31" />
+      <Item value="ISelenium`0" priority="31" />
+      <Item value="DefaultSelenium" priority="28" />
+      <Item value="WebDriverBackedSelenium" priority="28" />
+      <Item value="selenium" priority="31" />
+      <Item value="try" priority="127" />
+      <Item value="return" priority="159" />
+      <Item value="true" priority="95" />
+      <Item value="false" priority="63" />
+      <Item value="if" priority="95" />
+      <Item value="else" priority="63" />
+      <Item value="model" priority="63" />
+      <Item value="bool" priority="63" />
+      <Item value="isModelPresent" priority="95" />
+      <Item value="FirefoxWebElement`0" priority="31" />
+      <Item value="IWebElement`0" priority="95" />
+      <Item value="Action" priority="29" />
+      <Item value="target" priority="31" />
+      <Item value="Actions" priority="28" />
+      <Item value="actionsProvider" priority="31" />
+      <Item value="virtual" priority="31" />
+      <Item value="OpenQA" priority="31" />
+      <Item value="Support" priority="26" />
+      <Item value="IJavaScriptExecutor`0" priority="32" />
+      <Item value="tableElementHTML" priority="95" />
+      <Item value="DebuggerTypeProxyAttribute`0" priority="63" />
+      <Item value="tableElement" priority="63" />
+      <Item value="IDataScraper`0" priority="60" />
+      <Item value="DataScraper`0" priority="31" />
+      <Item value="EnvironmentVariableTarget`0" priority="31" />
+      <Item value="List" priority="63" />
+      <Item value="htmlList" priority="63" />
+      <Item value="List&lt;string&gt;" priority="28" />
+      <Item value="var" priority="31" />
+      <Item value="tagToSearch" priority="31" />
+      <Item value="DataScraper" priority="29" />
+      <Item value="catch" priority="31" />
+      <Item value="Exception`0" priority="63" />
+      <Item value="int" priority="127" />
+      <Item value="for" priority="31" />
+      <Item value="while" priority="63" />
+      <Item value="CheckForNextPage`0" priority="31" />
+      <Item value="pageNum" priority="319" />
+      <Item value="null" priority="31" />
+      <Item value="pageNumCounted" priority="63" />
+      <Item value="OrderedParallelQuery" priority="31" />
+      <Item value="e" priority="31" />
+      <Item value="isNextPageThere" priority="63" />
+      <Item value="GopherStyleUriParser`0" priority="31" />
+      <Item value="ElementNotVisibleException`0" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DomainWideObjects.SiteConfigurator">
+      <Item value="url" priority="53" />
+      <Item value="username" priority="26" />
+      <Item value="password" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DomainWideObjects.Website">
+      <Item value="url" priority="26" />
+      <Item value="username" priority="53" />
+      <Item value="password" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.Authenticator">
+      <Item value="website" priority="26" />
+      <Item value="driver" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenQA.Selenium.IWebDriver">
+      <Item value="FindElement`0" priority="350" />
+      <Item value="PageSource" priority="54" />
+      <Item value="FindElements`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenQA.Selenium.By">
+      <Item value="CssSelector`0" priority="26" />
+      <Item value="PartialLinkText`0" priority="161" />
+      <Item value="LinkText`0" priority="188" />
+      <Item value="Id`0" priority="107" />
+      <Item value="ClassName`0" priority="80" />
+      <Item value="XPath`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenQA.Selenium.IWebElement">
+      <Item value="Click`0" priority="107" />
+      <Item value="Enabled" priority="26" />
+      <Item value="Size" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.Navigator">
+      <Item value="Create`0" priority="26" />
+      <Item value="NavigateToPage`0" priority="26" />
+      <Item value="LoginToPage`0" priority="26" />
+      <Item value="pageNumChecker`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.Main">
+      <Item value="MainMethod`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.General.VehicleSelector">
+      <Item value="driver" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="296" />
+      <Item value="ReadLine`0" priority="189" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.IVehicleSelector">
+      <Item value="SelectMake`0" priority="26" />
+      <Item value="SelectModel`0" priority="26" />
+      <Item value="DragSlider`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Selenium.ISelenium">
+      <Item value="IsElementPresent`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenQA.Selenium.Interactions.Actions">
+      <Item value="DragAndDropToOffset`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenQA.Selenium.IJavaScriptExecutor">
+      <Item value="ExecuteScript`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debug">
+      <Item value="WriteLine`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.General.Data.DataScraper">
+      <Item value="driver" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SeleniumTestMain.General.Data.IDataScraper">
+      <Item value="GetHtml`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenQA.Selenium.By">
+      <Item value="FindElement`0" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\lib</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

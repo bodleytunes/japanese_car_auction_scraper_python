@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seleniumScrapeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="seleniumScrapeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="seleniumScrapeModel.sysdiagram" />
+    <EntitySet Name="tblHtmls" EntityType="seleniumScrapeModel.tblHtml" />
+    <EntitySet Name="tblHtmlLinks" EntityType="seleniumScrapeModel.tblHtmlLink" />
+    <EntitySet Name="tblHtmlRows" EntityType="seleniumScrapeModel.tblHtmlRow" />
+    <EntitySet Name="tblPages" EntityType="seleniumScrapeModel.tblPage" />
+    <EntitySet Name="tblSearchSessions" EntityType="seleniumScrapeModel.tblSearchSession" />
+    <EntitySet Name="tblUserLogins" EntityType="seleniumScrapeModel.tblUserLogin" />
+    <EntitySet Name="tblVehicles" EntityType="seleniumScrapeModel.tblVehicle" />
+    <EntitySet Name="tblVehicleTypeCountries" EntityType="seleniumScrapeModel.tblVehicleTypeCountry" />
+    <EntitySet Name="tblVehicleTypeDefineds" EntityType="seleniumScrapeModel.tblVehicleTypeDefined" />
+    <EntitySet Name="tblVehicleTypeGenerals" EntityType="seleniumScrapeModel.tblVehicleTypeGeneral" />
+    <AssociationSet Name="FK_tblHtml_tblSearchSession" Association="seleniumScrapeModel.FK_tblHtml_tblSearchSession">
+      <End Role="tblSearchSession" EntitySet="tblSearchSessions" />
+      <End Role="tblHtml" EntitySet="tblHtmls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHtml_tblVehicle1" Association="seleniumScrapeModel.FK_tblHtml_tblVehicle1">
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+      <End Role="tblHtml" EntitySet="tblHtmls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHtmlLink_tblHtml" Association="seleniumScrapeModel.FK_tblHtmlLink_tblHtml">
+      <End Role="tblHtml" EntitySet="tblHtmls" />
+      <End Role="tblHtmlLink" EntitySet="tblHtmlLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHtmlRow_tblSearchSession" Association="seleniumScrapeModel.FK_tblHtmlRow_tblSearchSession">
+      <End Role="tblSearchSession" EntitySet="tblSearchSessions" />
+      <End Role="tblHtmlRow" EntitySet="tblHtmlRows" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHtmlRow_tblVehicle" Association="seleniumScrapeModel.FK_tblHtmlRow_tblVehicle">
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+      <End Role="tblHtmlRow" EntitySet="tblHtmlRows" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPage_tblVehicle" Association="seleniumScrapeModel.FK_tblPage_tblVehicle">
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+      <End Role="tblPage" EntitySet="tblPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVehicle_tblVehicleType" Association="seleniumScrapeModel.FK_tblVehicle_tblVehicleType">
+      <End Role="tblVehicleTypeCountry" EntitySet="tblVehicleTypeCountries" />
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVehicle_tblVehicleTypeDefined" Association="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeDefined">
+      <End Role="tblVehicleTypeDefined" EntitySet="tblVehicleTypeDefineds" />
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVehicle_tblVehicleTypeGeneral" Association="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeGeneral">
+      <End Role="tblVehicleTypeGeneral" EntitySet="tblVehicleTypeGenerals" />
+      <End Role="tblVehicle" EntitySet="tblVehicles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblHtml">
+    <Key>
+      <PropertyRef Name="html_id_pk" />
+    </Key>
+    <Property Type="Int32" Name="html_id_pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="html_data" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Vehicle_id_fk" />
+    <Property Type="DateTime" Name="Search_Date_Timestamp" />
+    <Property Type="Int32" Name="Search_Session_ID_fk" />
+    <NavigationProperty Name="tblSearchSession" Relationship="seleniumScrapeModel.FK_tblHtml_tblSearchSession" FromRole="tblHtml" ToRole="tblSearchSession" />
+    <NavigationProperty Name="tblVehicle" Relationship="seleniumScrapeModel.FK_tblHtml_tblVehicle1" FromRole="tblHtml" ToRole="tblVehicle" />
+    <NavigationProperty Name="tblHtmlLinks" Relationship="seleniumScrapeModel.FK_tblHtmlLink_tblHtml" FromRole="tblHtml" ToRole="tblHtmlLink" />
+  </EntityType>
+  <EntityType Name="tblHtmlLink">
+    <Key>
+      <PropertyRef Name="html_Link_ID_PK" />
+    </Key>
+    <Property Type="Int32" Name="html_Link_ID_PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="html_data_ID_fk" />
+    <Property Type="Int32" Name="html_link_order_position_number" />
+    <NavigationProperty Name="tblHtml" Relationship="seleniumScrapeModel.FK_tblHtmlLink_tblHtml" FromRole="tblHtmlLink" ToRole="tblHtml" />
+  </EntityType>
+  <EntityType Name="tblHtmlRow">
+    <Key>
+      <PropertyRef Name="html_row_id_PK" />
+    </Key>
+    <Property Type="Int32" Name="html_row_id_PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="html_row_data" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="html_row_number" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="Search_Date_Timestamp" />
+    <Property Type="Int32" Name="Search_Session_ID_fk" />
+    <Property Type="Int32" Name="Vehicle_id_fk" />
+    <NavigationProperty Name="tblSearchSession" Relationship="seleniumScrapeModel.FK_tblHtmlRow_tblSearchSession" FromRole="tblHtmlRow" ToRole="tblSearchSession" />
+    <NavigationProperty Name="tblVehicle" Relationship="seleniumScrapeModel.FK_tblHtmlRow_tblVehicle" FromRole="tblHtmlRow" ToRole="tblVehicle" />
+  </EntityType>
+  <EntityType Name="tblPage">
+    <Key>
+      <PropertyRef Name="page_id_pk" />
+    </Key>
+    <Property Type="Int32" Name="Vehicle_ID_fk" />
+    <Property Type="Int32" Name="page_id_pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Search_Date_Timestamp" />
+    <NavigationProperty Name="tblVehicle" Relationship="seleniumScrapeModel.FK_tblPage_tblVehicle" FromRole="tblPage" ToRole="tblVehicle" />
+  </EntityType>
+  <EntityType Name="tblSearchSession">
+    <Key>
+      <PropertyRef Name="Search_Session_ID_PK" />
+    </Key>
+    <Property Type="Int32" Name="Search_Session_ID_PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tblHtmls" Relationship="seleniumScrapeModel.FK_tblHtml_tblSearchSession" FromRole="tblSearchSession" ToRole="tblHtml" />
+    <NavigationProperty Name="tblHtmlRows" Relationship="seleniumScrapeModel.FK_tblHtmlRow_tblSearchSession" FromRole="tblSearchSession" ToRole="tblHtmlRow" />
+    <Property Type="DateTime" Name="Search_Session_Timestamp" />
+  </EntityType>
+  <EntityType Name="tblUserLogin">
+    <Key>
+      <PropertyRef Name="tblUserLoginID" />
+    </Key>
+    <Property Type="Int32" Name="tblUserLoginID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="tblUserLoginName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tblUserLoginPassword" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="tblUserLoginEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblVehicle">
+    <Key>
+      <PropertyRef Name="Vehicle_ID_Pk" />
+    </Key>
+    <Property Type="Int32" Name="Vehicle_Type_General_id_fk" />
+    <Property Type="Int32" Name="Vehicle_Type_Defined_fk" />
+    <Property Type="Int32" Name="Vehicle_ID_Pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Vehicle_Make" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Vehicle_Model" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Vehicle_Type_ID_fk" />
+    <Property Type="Boolean" Name="Vehicle_WillBeSearched" />
+    <Property Type="Boolean" Name="Vehicle_CondtionFilter" />
+    <NavigationProperty Name="tblHtmls" Relationship="seleniumScrapeModel.FK_tblHtml_tblVehicle1" FromRole="tblVehicle" ToRole="tblHtml" />
+    <NavigationProperty Name="tblHtmlRows" Relationship="seleniumScrapeModel.FK_tblHtmlRow_tblVehicle" FromRole="tblVehicle" ToRole="tblHtmlRow" />
+    <NavigationProperty Name="tblPages" Relationship="seleniumScrapeModel.FK_tblPage_tblVehicle" FromRole="tblVehicle" ToRole="tblPage" />
+    <NavigationProperty Name="tblVehicleTypeCountry" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleType" FromRole="tblVehicle" ToRole="tblVehicleTypeCountry" />
+    <NavigationProperty Name="tblVehicleTypeDefined" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeDefined" FromRole="tblVehicle" ToRole="tblVehicleTypeDefined" />
+    <NavigationProperty Name="tblVehicleTypeGeneral" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeGeneral" FromRole="tblVehicle" ToRole="tblVehicleTypeGeneral" />
+    <Property Type="Double" Name="Vehicle_ConditionCode" />
+  </EntityType>
+  <EntityType Name="tblVehicleTypeCountry">
+    <Key>
+      <PropertyRef Name="Vehicle_Type_Country_ID_pk" />
+    </Key>
+    <Property Type="Int32" Name="Vehicle_Type_Country_ID_pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Vehicle_Type_Country" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblVehicles" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleType" FromRole="tblVehicleTypeCountry" ToRole="tblVehicle" />
+  </EntityType>
+  <EntityType Name="tblVehicleTypeDefined">
+    <Key>
+      <PropertyRef Name="VehicleTypeDefined_id_pk" />
+    </Key>
+    <Property Type="Int32" Name="VehicleTypeDefined_id_pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="VehicleTypeDefined" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblVehicles" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeDefined" FromRole="tblVehicleTypeDefined" ToRole="tblVehicle" />
+  </EntityType>
+  <EntityType Name="tblVehicleTypeGeneral">
+    <Key>
+      <PropertyRef Name="VehicleTypeGeneral_pk" />
+    </Key>
+    <Property Type="Int32" Name="VehicleTypeGeneral_pk" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="VehicleTypeGeneral" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblVehicles" Relationship="seleniumScrapeModel.FK_tblVehicle_tblVehicleTypeGeneral" FromRole="tblVehicleTypeGeneral" ToRole="tblVehicle" />
+  </EntityType>
+  <Association Name="FK_tblHtml_tblSearchSession">
+    <End Type="seleniumScrapeModel.tblSearchSession" Role="tblSearchSession" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblHtml" Role="tblHtml" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSearchSession">
+        <PropertyRef Name="Search_Session_ID_PK" />
+      </Principal>
+      <Dependent Role="tblHtml">
+        <PropertyRef Name="Search_Session_ID_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHtml_tblVehicle1">
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblHtml" Role="tblHtml" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicle">
+        <PropertyRef Name="Vehicle_ID_Pk" />
+      </Principal>
+      <Dependent Role="tblHtml">
+        <PropertyRef Name="Vehicle_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHtmlLink_tblHtml">
+    <End Type="seleniumScrapeModel.tblHtml" Role="tblHtml" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblHtmlLink" Role="tblHtmlLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHtml">
+        <PropertyRef Name="html_id_pk" />
+      </Principal>
+      <Dependent Role="tblHtmlLink">
+        <PropertyRef Name="html_data_ID_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHtmlRow_tblSearchSession">
+    <End Type="seleniumScrapeModel.tblSearchSession" Role="tblSearchSession" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblHtmlRow" Role="tblHtmlRow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSearchSession">
+        <PropertyRef Name="Search_Session_ID_PK" />
+      </Principal>
+      <Dependent Role="tblHtmlRow">
+        <PropertyRef Name="Search_Session_ID_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHtmlRow_tblVehicle">
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblHtmlRow" Role="tblHtmlRow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicle">
+        <PropertyRef Name="Vehicle_ID_Pk" />
+      </Principal>
+      <Dependent Role="tblHtmlRow">
+        <PropertyRef Name="Vehicle_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPage_tblVehicle">
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblPage" Role="tblPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicle">
+        <PropertyRef Name="Vehicle_ID_Pk" />
+      </Principal>
+      <Dependent Role="tblPage">
+        <PropertyRef Name="Vehicle_ID_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVehicle_tblVehicleType">
+    <End Type="seleniumScrapeModel.tblVehicleTypeCountry" Role="tblVehicleTypeCountry" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicleTypeCountry">
+        <PropertyRef Name="Vehicle_Type_Country_ID_pk" />
+      </Principal>
+      <Dependent Role="tblVehicle">
+        <PropertyRef Name="Vehicle_Type_ID_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVehicle_tblVehicleTypeDefined">
+    <End Type="seleniumScrapeModel.tblVehicleTypeDefined" Role="tblVehicleTypeDefined" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicleTypeDefined">
+        <PropertyRef Name="VehicleTypeDefined_id_pk" />
+      </Principal>
+      <Dependent Role="tblVehicle">
+        <PropertyRef Name="Vehicle_Type_Defined_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVehicle_tblVehicleTypeGeneral">
+    <End Type="seleniumScrapeModel.tblVehicleTypeGeneral" Role="tblVehicleTypeGeneral" Multiplicity="0..1" />
+    <End Type="seleniumScrapeModel.tblVehicle" Role="tblVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVehicleTypeGeneral">
+        <PropertyRef Name="VehicleTypeGeneral_pk" />
+      </Principal>
+      <Dependent Role="tblVehicle">
+        <PropertyRef Name="Vehicle_Type_General_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
