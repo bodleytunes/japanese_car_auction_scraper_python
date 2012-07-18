@@ -25,7 +25,7 @@ def begin():
     authenticate()
     # Choose vehicle
     # Create vehicles to search list
-    vehicles_to_search.append(vehicle_to_search(vehicle_make, vehicle_model))
+    #vehicles_to_search.append(vehicle_to_search(vehicle_make, vehicle_model))
     vehicles_to_search.append(vehicle_to_search("TOYOTA", "HIACE VAN"))
     vehicles_to_search.append(vehicle_to_search("GM", "CORDOBA2"))
     vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET CHEVYVAN"))
@@ -56,22 +56,19 @@ def vehicle_stuff():
     
     for search_vehicle in vehicles_to_search:
         time.sleep(4)
-        # Only continue to do the vehicle stuff if make or model is present! otherwise loop around to next vehicle in the list.  
-        if(choose_make_link(search_vehicle.make)):
-            time.sleep(4)
-            if(choose_model(search_vehicle.model)):
-                time.sleep(5)
-                print("Model done!")          
-#                page_count = count_pages()
-#                row_count = count_rows()
-#                get_rows(row_count, page_count)
-                # Now click button to return to home screen (to select make)
-                driver.find_element_by_class_name("aj_exp").click()        
-            else:
+        # Only continue to do the vehicle stuff if make & model is present! otherwise loop around to next vehicle in the list.  
+        if(choose_make_link(search_vehicle.make) and choose_model(search_vehicle.model)):
+            time.sleep(5)     
+            page_count = count_pages()
+#           row_count = count_rows()
+#           get_rows(row_count, page_count)
+          # Now click button to return to home screen (to select make)
+            driver.find_element_by_class_name("aj_exp").click()        
+        else:
                 #if no model on page, then click home
-                print("no model!")
-                time.sleep(2)
-                driver.find_element_by_class_name("nachalo").click()
+            print("no model!")
+            time.sleep(2)
+            driver.find_element_by_class_name("nachalo").click()  # Click home
         print("finished vehicle" + " " + search_vehicle.make + search_vehicle.model)
         
 ## Loop starts here for each vehicle
@@ -93,9 +90,37 @@ def choose_model(model):
     
 def count_pages():
     
+    page_limit = 15
     page_count = 0
     
-    return page_count()
+    elements = driver.find_elements_by_class_name("navi1") #get all page number elements
+    elements_unique = []  #create empty list for unique page numbers
+    for element in elements:
+        elements_unique.append(int(element.text)) #add to the new list as integer so can be sorted
+        
+    elements_unique = sorted(set(elements_unique))  # set makes unique, sort sorts the order
+    
+    for element in elements_unique:
+        print element
+    #raw_input("continue...")
+    
+    page_count_run = len(elements_unique)  # total number of items in the list
+    #print "page count run = " + str(page_count_run)
+    page_count_run = page_count_run - 1
+    #driver.find_element_by_xpath("//@class='navi1'[text()='15']")
+    
+    #click on element 5
+    #elements[1].click()  # okay we know that it can click page two like this
+    
+    for i in range(1, page_count_run):
+        elements[i].click()
+        print("just clicked" + str(i))
+        # for some reason need to refresh the elements after a click or vanishes from DOM!
+        elements = driver.find_elements_by_class_name("navi1")
+        time.sleep(2)
+        
+    raw_input("waiting...")    
+    return page_count
 
 def row_count():
     
