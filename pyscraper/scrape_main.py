@@ -14,15 +14,15 @@ vehicle_make = "GM"
 vehicle_model = "CHEVROLET ASTRO"
 vehicles_to_search = []
 xpath_login_box = "/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/span/table/tbody/tr/td/input[2]"
-css_login_ok = "input.ajneo3"
+css_login_ok = "ajneo3"
 
 def begin():
     #full screen
     
     #driver.find_element_by_tag_name("body").send_keys(Keys.F11)
     driver.get(scrape_url)
-    #authenticate and login
-    authenticate()
+    
+    authenticate()  #authenticate and login
     # Choose vehicle
     # Create vehicles to search list
     #vehicles_to_search.append(vehicle_to_search(vehicle_make, vehicle_model))
@@ -50,15 +50,16 @@ def authenticate():
     driver.find_element_by_name("password").clear()
     driver.find_element_by_name("password").send_keys(login_password)
     #Click login
-    driver.find_element_by_class_name("ajneo3").click()
+    driver.find_element_by_class_name(css_login_ok ).click()
     
 def vehicle_stuff():
     
     for search_vehicle in vehicles_to_search:
-        time.sleep(4)
-        # Only continue to do the vehicle stuff if make & model is present! otherwise loop around to next vehicle in the list.  
+        time.sleep(3)  # Don't want to go too fast, give it a sleep to let things load.
+        # Only continue to do the vehicle stuff if make & model is present! otherwise loop 
+        # around to next vehicle in the list.  
         if(choose_make_link(search_vehicle.make) and choose_model(search_vehicle.model)):
-            time.sleep(5)     
+            time.sleep(3)     
             page_count = count_pages()
 #           row_count = count_rows()
 #           get_rows(row_count, page_count)
@@ -99,27 +100,18 @@ def count_pages():
         elements_unique.append(int(element.text)) #add to the new list as integer so can be sorted
         
     elements_unique = sorted(set(elements_unique))  # set makes unique, sort sorts the order
-    
-    for element in elements_unique:
-        print element
-    #raw_input("continue...")
-    
+      
     page_count_run = len(elements_unique)  # total number of items in the list
     #print "page count run = " + str(page_count_run)
-    page_count_run = page_count_run - 1
-    #driver.find_element_by_xpath("//@class='navi1'[text()='15']")
-    
-    #click on element 5
+    page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
     #elements[1].click()  # okay we know that it can click page two like this
     
     for i in range(1, page_count_run):
         elements[i].click()
-        print("just clicked" + str(i))
         # for some reason need to refresh the elements after a click or vanishes from DOM!
         elements = driver.find_elements_by_class_name("navi1")
         time.sleep(2)
-        
-    raw_input("waiting...")    
+           
     return page_count
 
 def row_count():
@@ -170,15 +162,15 @@ def save_to_db(vehicle):
 ##  Loop END here for each vehicle    
     
 def finish():
-    
+        
     driver.quit()
     
-
-
 class vehicle():
     
-    def __init__(self, make=None,model=None,year=None,miles=None,grade=None,date=None,start_price=None,end_price=None):
+    def __init__(self,lotnumber=None,make=None,model=None,year=None,miles=None,\
+                 grade=None,date=None,start_price=None,end_price=None):
         
+        self.lotnumber=lotnumber
         self.make=make
         self.model=model
         self.year=year
@@ -196,6 +188,3 @@ class vehicle_to_search():
 begin()
         
         
-    
-
-
