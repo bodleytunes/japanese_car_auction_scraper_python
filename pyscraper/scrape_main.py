@@ -3,6 +3,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.common.keys import Keys
 import time
+from parse import htmlparser
 
 scrape_url = "http://www.jpcenter.ru" #Url to scrape
  # Create instance of chrome driver.
@@ -17,9 +18,7 @@ xpath_login_box = "/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody
 css_login_ok = "ajneo3"
 
 def begin():
-    #full screen
-    
-    #driver.find_element_by_tag_name("body").send_keys(Keys.F11)
+
     driver.get(scrape_url)
     
     authenticate()  #authenticate and login
@@ -39,6 +38,7 @@ def begin():
     vehicles_to_search.append(vehicle_to_search("MaNGO", "PARROT"))
     vehicles_to_search.append(vehicle_to_search("ISUZU", "RODEO"))
     vehicles_to_search.append(vehicle_to_search("MITSUBISHI", "DELICA TRUCK"))
+    
     vehicle_stuff()
 
 def authenticate():
@@ -60,7 +60,8 @@ def vehicle_stuff():
         # around to next vehicle in the list.  
         if(choose_make_link(search_vehicle.make) and choose_model(search_vehicle.model)):
             time.sleep(3)     
-            page_count = count_pages()
+            
+            count_pages()
 #           row_count = count_rows()
 #           get_rows(row_count, page_count)
           # Now click button to return to home screen (to select make)
@@ -91,10 +92,7 @@ def choose_model(model):
     
 def count_pages():
     
-    page_limit = 15
-    page_count = 0
-    
-    while (check_next_arrow_exists() or check_left_arrow_exists()):
+    while (check_next_arrow_exists() or check_left_arrow_exists()):   # Check that either the left or right nav arrow for pages exists
         elements = driver.find_elements_by_class_name("navi1") #get all page number elements
         elements_unique = []  #create empty list for unique page numbers
         for element in elements:
@@ -108,14 +106,15 @@ def count_pages():
             page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
           
         for i in range(1, page_count_run):
+            #Get Rows!
+            get_row_data()
+            
             elements[i].click()
             # for some reason need to refresh the elements after a click or vanishes from DOM!
             elements = driver.find_elements_by_class_name("navi1")
             time.sleep(3)
-        
         # Click next arrow
-        #if (page_count_run < 16 or check_navi_dots() and check_next_arrow_exists()):
-        if (check_next_arrow_exists()):
+        if (check_next_arrow_exists()):   # Check that the right hand (next ) arrow exists
             driver.find_element_by_xpath("//span[@class='navi2'][contains(@style,'background-position:-110')]").click()
         else:
             break
@@ -139,18 +138,19 @@ def check_navi_dots(): # Check for BOTH navi dots
         return True 
     except:
         return False 
-    
-def row_count():
-    
-    row_count = 0
-    
-    return row_count
-            
-def get_row():
-    row_data = xxxxxxxx
-    return row_data
 
-def get_rows(row_count, page_count):
+def get_row_data():
+    # Find all aj elements(row elements) | also remember the not operator to ditch the header row aj_view00!    
+    row_elements = driver.find_elements_by_xpath("//tr[contains(@id, 'aj_view')][not(contains(@id, 'aj_view00'))]")
+    number_of_rows = len(row_elements)
+    
+    for row_element in row_elements:
+        
+        htmlparser.start_parse(row_element)
+        
+                
+
+def get_rows(row_count):
     print "get rows"
 
 def parse_vehicles(vehicles):
