@@ -94,48 +94,64 @@ def count_pages():
     page_limit = 15
     page_count = 0
     
-    elements = driver.find_elements_by_class_name("navi1") #get all page number elements
-    elements_unique = []  #create empty list for unique page numbers
-    for element in elements:
-        elements_unique.append(int(element.text)) #add to the new list as integer so can be sorted
+    while (check_next_arrow_exists() or check_left_arrow_exists()):
+        elements = driver.find_elements_by_class_name("navi1") #get all page number elements
+        elements_unique = []  #create empty list for unique page numbers
+        for element in elements:
+            elements_unique.append(int(element.text)) #add to the new list as integer so can be sorted
+            
+        elements_unique = sorted(set(elements_unique))  # set makes unique, sort sorts the order
+          
+        page_count_run = len(elements_unique)  # total number of items in the list
+        # if not right arrow then add one to the page count run otherwise it ends one too early
+        if (check_next_arrow_exists()):
+            page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
+          
+        for i in range(1, page_count_run):
+            elements[i].click()
+            # for some reason need to refresh the elements after a click or vanishes from DOM!
+            elements = driver.find_elements_by_class_name("navi1")
+            time.sleep(3)
         
-    elements_unique = sorted(set(elements_unique))  # set makes unique, sort sorts the order
-      
-    page_count_run = len(elements_unique)  # total number of items in the list
-    #print "page count run = " + str(page_count_run)
-    page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
-    #elements[1].click()  # okay we know that it can click page two like this
+        # Click next arrow
+        #if (page_count_run < 16 or check_navi_dots() and check_next_arrow_exists()):
+        if (check_next_arrow_exists()):
+            driver.find_element_by_xpath("//span[@class='navi2'][contains(@style,'background-position:-110')]").click()
+        else:
+            break
+         # loop around        
+def check_next_arrow_exists():
+    try:
+        driver.find_element_by_xpath("//span[@class='navi2'][contains(@style,'background-position:-110')]")
+        return True 
+    except:
+        return False
+def check_left_arrow_exists():
+    try:
+        driver.find_element_by_xpath("//span[@class='navi2'][contains(@style,'background-position:-98')]")
+        return True 
+    except:
+        return False    
+def check_navi_dots(): # Check for BOTH navi dots
+    try:
+        driver.find_element_by_css_selector("b.navi_dots")
+        driver.find_element_by_css_selector("td.navi_dots")
+        return True 
+    except:
+        return False 
     
-    for i in range(1, page_count_run):
-        elements[i].click()
-        # for some reason need to refresh the elements after a click or vanishes from DOM!
-        elements = driver.find_elements_by_class_name("navi1")
-        time.sleep(2)
-           
-    return page_count
-
 def row_count():
     
     row_count = 0
     
     return row_count
-
-def next_page(page_number):
-    click_page(page_number)
             
 def get_row():
     row_data = xxxxxxxx
     return row_data
 
 def get_rows(row_count, page_count):
-    
-    for p in range(page_count):
-        for r in range(row_count):
-            row_data = get_row(r)
-            vehicles.append(vehicle(row_data))
-        next_page(page_number)
-        
-        parse_vehicles(vehicles)
+    print "get rows"
 
 def parse_vehicles(vehicles):
     
