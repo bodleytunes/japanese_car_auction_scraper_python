@@ -144,9 +144,11 @@ def get_row_data():
     row_elements = driver.find_elements_by_xpath("//tr[contains(@id, 'aj_view')][not(contains(@id, 'aj_view00'))]")
     number_of_rows = len(row_elements)
     
+    
+    
     for row_element in row_elements:
-        
-        htmlparser.start_parse(row_element)
+        row_html = driver.execute_script("return arguments[0].innerHTML", row_element)
+        htmlparser.start_parse(row_element, row_html)
         
                 
 
