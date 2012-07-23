@@ -11,11 +11,13 @@ driver = webdriver.Chrome()
 #driver = webdriver.Firefox()
 login_user = "monkey5"
 login_password = "bingo"
-vehicle_make = "GM"
-vehicle_model = "CHEVROLET ASTRO"
 vehicles_to_search = []
 xpath_login_box = "/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/span/table/tbody/tr/td/input[2]"
 css_login_ok = "ajneo3"
+# Filename to write data to
+f = open('c:\AuctionScraper\searchlog.txt', 'w')
+f2 = open('c:\AuctionScraper\unique-auction-houses.txt', 'w')
+auction_house_unique = []
 
 def begin():
 
@@ -25,21 +27,44 @@ def begin():
     # Choose vehicle
     # Create vehicles to search list
     #vehicles_to_search.append(vehicle_to_search(vehicle_make, vehicle_model))
+    ## TOYOTA HIACE ##
     vehicles_to_search.append(vehicle_to_search("TOYOTA", "HIACE VAN"))
-    vehicles_to_search.append(vehicle_to_search("GM", "CORDOBA2"))
+    vehicles_to_search.append(vehicle_to_search("TOYOTA", "HIACE"))
+    ## AMERICAN ##
+    vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET ASTRO"))
+    vehicles_to_search.append(vehicle_to_search("GMC", "CHEVROLET ASTRO"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "CHEVROLET ASTRO"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "ASTRO"))
     vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET CHEVYVAN"))
-    vehicles_to_search.append(vehicle_to_search("GMC", "ANY"))
-    vehicles_to_search.append(vehicle_to_search("TOYOTA", "TOWNACE VAN"))
+    vehicles_to_search.append(vehicle_to_search("GMC", "CHEVROLET CHEVYVAN"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "CHEVROLET CHEVYVAN"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "CHEVYVAN"))
+    vehicles_to_search.append(vehicle_to_search("GM", "VANDURA"))
+    vehicles_to_search.append(vehicle_to_search("GMC", "VANDURA"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "VANDURA"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "VANDURA"))
+    vehicles_to_search.append(vehicle_to_search("GMC", "OTHER"))
+    vehicles_to_search.append(vehicle_to_search("GM", "OTHER"))
+    vehicles_to_search.append(vehicle_to_search("CHEVROLET", "OTHER"))
+    vehicles_to_search.append(vehicle_to_search("FORD", "OTHER"))
+    
+    ## JAP ##
+    vehicles_to_search.append(vehicle_to_search("TOYOTA", "TOWN ACE TRUCK"))
+    vehicles_to_search.append(vehicle_to_search("TOYOTA", "LITE ACE TRUCK"))
     vehicles_to_search.append(vehicle_to_search("ISUZU", "ELF TRUCK"))
     vehicles_to_search.append(vehicle_to_search("MAZDA", "BONGO FRIENDEE"))
     vehicles_to_search.append(vehicle_to_search("NISSAN", "CARAVAN"))
     vehicles_to_search.append(vehicle_to_search("MAZDA", "RX-7"))
-    vehicles_to_search.append(vehicle_to_search("MUNGO", "PARROT"))
-    vehicles_to_search.append(vehicle_to_search("MaNGO", "PARROT"))
+    vehicles_to_search.append(vehicle_to_search("TOYOTA", "ARISTO"))
     vehicles_to_search.append(vehicle_to_search("ISUZU", "RODEO"))
     vehicles_to_search.append(vehicle_to_search("MITSUBISHI", "DELICA TRUCK"))
-    
+    vehicles_to_search.append(vehicle_to_search("SUBARU", "SAMBAR"))
+    vehicles_to_search.append(vehicle_to_search("SUBARU", "DOMINGO"))
+   
     vehicle_stuff()
+    write_unique_auction_houses()
+    
+    finish()
 
 def authenticate():
     # Click login
@@ -60,18 +85,17 @@ def vehicle_stuff():
         # around to next vehicle in the list.  
         if(choose_make_link(search_vehicle.make) and choose_model(search_vehicle.model)):
             time.sleep(3)     
-            
-            count_pages()
-#           row_count = count_rows()
-#           get_rows(row_count, page_count)
-          # Now click button to return to home screen (to select make)
+            # do the page stuff (nav / scrape / parse)
+            do_pages()
+            # Now click button to return to home screen (to select make)
             driver.find_element_by_class_name("aj_exp").click()        
         else:
-                #if no model on page, then click home
+            # if no model on page, then click home
             print("no model!")
             time.sleep(2)
             driver.find_element_by_class_name("nachalo").click()  # Click home
-        print("finished vehicle" + " " + search_vehicle.make + search_vehicle.model)
+            
+        print("finished vehicle" + " " + search_vehicle.make + " " + search_vehicle.model)
         
 ## Loop starts here for each vehicle
     
@@ -90,7 +114,7 @@ def choose_model(model):
     except:
         return None
     
-def count_pages():
+def do_pages():
     
     while (check_next_arrow_exists() or check_left_arrow_exists()):   # Check that either the left or right nav arrow for pages exists
         elements = driver.find_elements_by_class_name("navi1") #get all page number elements
@@ -106,9 +130,9 @@ def count_pages():
             page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
           
         for i in range(1, page_count_run):
-            #Get Rows!
+            # Get Rows Data!
             get_row_data()
-            
+            # Click next page number
             elements[i].click()
             # for some reason need to refresh the elements after a click or vanishes from DOM!
             elements = driver.find_elements_by_class_name("navi1")
@@ -143,15 +167,20 @@ def get_row_data():
     # Find all aj elements(row elements) | also remember the not operator to ditch the header row aj_view00!    
     row_elements = driver.find_elements_by_xpath("//tr[contains(@id, 'aj_view')][not(contains(@id, 'aj_view00'))]")
     number_of_rows = len(row_elements)
-    
-    
+    global auction_house_unique
     
     for row_element in row_elements:
         row_html = driver.execute_script("return arguments[0].innerHTML", row_element)
-        htmlparser.start_parse(row_element, row_html)
+        auction_house_unique = htmlparser.start_parse(row_element, row_html, f, auction_house_unique)
         
-                
-
+def write_unique_auction_houses():
+    # write auction houses to text file.
+    global auction_house_unique
+    for item in auction_house_unique:
+        f2.write(item + "\n")
+    
+    
+            
 def get_rows(row_count):
     print "get rows"
 

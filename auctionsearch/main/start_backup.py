@@ -3,7 +3,8 @@ Created on 1 Nov 2011
 
 @author: jonny boy clayton
 '''
-from BeautifulSoup import BeautifulSoup
+#from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 import pymongo
 from pymongo import Connection
 from Objects.WebPage import *
