@@ -3,7 +3,25 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.common.keys import Keys
 import time
+from datetime import date, datetime
+from datetime import timedelta
 from parse import htmlparser
+import sys
+
+from dbstuff import model
+
+
+from sqlalchemy import *
+from sqlalchemy import create_engine    
+from sqlalchemy import exc
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import func
+from sqlalchemy import distinct
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import Table, Column, Integer, ForeignKey, String, DateTime, Boolean
+from sqlalchemy.orm import relationship, backref
+from sqlalchemy.ext.declarative import declarative_base
+
 
 scrape_url = "http://www.jpcenter.ru" #Url to scrape
  # Create instance of chrome driver.
@@ -16,8 +34,8 @@ xpath_login_box = "/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody
 css_login_ok = "ajneo3"
 # Filename to write data to
 f = open('c:\AuctionScraper\searchlog.txt', 'w')
-f2 = open('c:\AuctionScraper\unique-auction-houses.txt', 'w')
-auction_house_unique = []
+
+
 
 def begin():
 
@@ -60,9 +78,12 @@ def begin():
     vehicles_to_search.append(vehicle_to_search("MITSUBISHI", "DELICA TRUCK"))
     vehicles_to_search.append(vehicle_to_search("SUBARU", "SAMBAR"))
     vehicles_to_search.append(vehicle_to_search("SUBARU", "DOMINGO"))
-   
+    
+    # set the current search day and search session
+    set_day_id_and_search_session()
+       
     vehicle_stuff()
-    write_unique_auction_houses()
+    #write_unique_auction_houses()
     
     finish()
 
@@ -83,6 +104,11 @@ def vehicle_stuff():
         time.sleep(3)  # Don't want to go too fast, give it a sleep to let things load.
         # Only continue to do the vehicle stuff if make & model is present! otherwise loop 
         # around to next vehicle in the list.  
+        global make # set as globals
+        global model
+        make = search_vehicle.make
+        model = search_vehicle.model
+       
         if(choose_make_link(search_vehicle.make) and choose_model(search_vehicle.model)):
             time.sleep(3)     
             # do the page stuff (nav / scrape / parse)
@@ -167,66 +193,105 @@ def get_row_data():
     # Find all aj elements(row elements) | also remember the not operator to ditch the header row aj_view00!    
     row_elements = driver.find_elements_by_xpath("//tr[contains(@id, 'aj_view')][not(contains(@id, 'aj_view00'))]")
     number_of_rows = len(row_elements)
-    global auction_house_unique
+    
+    global make
+    global model
+    
+    db = GetDB()
     
     for row_element in row_elements:
         row_html = driver.execute_script("return arguments[0].innerHTML", row_element)
-        auction_house_unique = htmlparser.start_parse(row_element, row_html, f, auction_house_unique)
+        htmlparser.start_parse(row_element, row_html, f, \
+                                     make, model, db, day_id, search_session_id)
+    # final save to db
+    #db.commit()
         
-def write_unique_auction_houses():
-    # write auction houses to text file.
-    global auction_house_unique
-    for item in auction_house_unique:
-        f2.write(item + "\n")
-    
-    
+
             
-def get_rows(row_count):
-    print "get rows"
 
-def parse_vehicles(vehicles):
-    
-    vehicles=[]
-    vehicles.append(vehicle(make, model, year, miles, grade, date, start_price, end_price))
-    # Do parsing stuff
-    
-    # Write to new list
-    
-    
-    
-    vehicles_parsed = clean_vehicles(vehicles)
-    
-    for vehicle in vehicles_parsed:
-        save_to_db(vehicle)
         
-def save_to_db(vehicle):
+def GetDB():
+    engine = create_engine('postgresql://postgres:postgres@jmcmongo:5432/test')
+# create a configured "Session" class
+    NewSession = sessionmaker(bind=engine)
+# create a Session
+    db = NewSession()
+    return db
     
-    #try / Catch
+def set_day_id_and_search_session():
+    global day_id
+    global search_session_id
+    
     db = GetDB()
-    db.append(vehicle)
-    db.flush()
+    
+    insert_new_search_session()
+    
+    # latest search day
+    resultset = db.query(model.SearchDay.id).order_by(desc(model.SearchDay.id)).first()
+    day_id = resultset.id
+    # latest search session
+    resultset = db.query(model.SearchSession.id).order_by(desc(model.SearchSession.id)).first()
+    search_session_id = resultset.id
 
-##  Loop END here for each vehicle    
+def insert_new_search_session():
+     #Insert new search session
+    newdate = datetime.now()
+    #Round time to nearest day by getting rid of the unwanted shizzle
+    #Dont round this any more as will do this for the day session
+    #newdate = newdate.replace(hour = 0, minute = 0, second = 0, microsecond = 0)
+    
+    print(newdate)
+    
+    db = GetDB()
+    ss = model.SearchSession()
+    ss.searchDate = newdate
+    db.add(ss)
+    db.commit()
+    #Select new search session
+
+def insert_new_search_day():
+    db = GetDB()
+    
+    day = datetime.now()
+    # Round to nearest day
+    day = newDay.replace(hour = 0, minute = 0, second = 0, microsecond = 0)
+    
+    #get day from date
+    dayofWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    actualDay = dayofWeek[date.weekday(day)]
+    
+    
+    latest_search_day = db.query(model.SearchDay).order_by(desc(model.SearchDay.id)).first()
+    
+    if(latest_search_day.date != day):
+        
+    
+        sd = model.SearchDay()
+        
+        sd.date = day
+        sd.actualDay = actualDay
+        
+        print(str(day))
+       
+        #raw_input("day is above")
+        
+        # This is the save to db bit, that will allow you to try and write but if it exists it wont
+        # throw an exception.
+        
+        db.merge(sd)
+        try:
+            db.commit() 
+            print("Inserted new search day")
+        except exc.SQLAlchemyError:
+            db.rollback()
+            print("found dupes")
+     
     
 def finish():
         
     driver.quit()
     
-class vehicle():
-    
-    def __init__(self,lotnumber=None,make=None,model=None,year=None,miles=None,\
-                 grade=None,date=None,start_price=None,end_price=None):
-        
-        self.lotnumber=lotnumber
-        self.make=make
-        self.model=model
-        self.year=year
-        self.miles=miles
-        self.grade=grade
-        self.date=date
-        self.start_price=start_price
-        self.end_price=end_price
-        
+
 class vehicle_to_search():
     def __init__(self, make=None, model=None):
         self.make=make

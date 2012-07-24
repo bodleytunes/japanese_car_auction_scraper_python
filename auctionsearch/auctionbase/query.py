@@ -614,10 +614,10 @@ def InsertVehicle(auctionHouse=None,\
     avehicle.day_id = dayId
     avehicle.beenViewed = False
     try:
-        avehicle.searchVehicle_id = QgetModelId(make, model)
+        avehicle.searchVehicle_id = get_model_id(make, model)
     except:
         InsertSearchVehicle(make, model)
-        avehicle.searchVehicle_id = QgetModelId(make, model)
+        avehicle.searchVehicle_id = get_model_id(make, model)
     
     try:
         # Add the object to the current session
