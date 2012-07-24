@@ -147,7 +147,7 @@ def save_vehicle_to_db(db,f, auctionHouse,lotNumber,remoteurl,make,model,imgurl1
         
     except Exception as e:        
         print(".")
-        print e
+        #print e
         db.rollback()
         
 def get_model_id(db, make, model):

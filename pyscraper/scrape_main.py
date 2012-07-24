@@ -46,11 +46,13 @@ def begin():
     # Create vehicles to search list
     #vehicles_to_search.append(vehicle_to_search(vehicle_make, vehicle_model))
     ## TOYOTA HIACE ##
+    vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET ASTRO"))
+    vehicles_to_search.append(vehicle_to_search("GMC", "CHEVROLET ASTRO"))
     vehicles_to_search.append(vehicle_to_search("TOYOTA", "HIACE VAN"))
     vehicles_to_search.append(vehicle_to_search("TOYOTA", "HIACE"))
     ## AMERICAN ##
-    vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET ASTRO"))
-    vehicles_to_search.append(vehicle_to_search("GMC", "CHEVROLET ASTRO"))
+   
+   
     vehicles_to_search.append(vehicle_to_search("CHEVROLET", "CHEVROLET ASTRO"))
     vehicles_to_search.append(vehicle_to_search("CHEVROLET", "ASTRO"))
     vehicles_to_search.append(vehicle_to_search("GM", "CHEVROLET CHEVYVAN"))
@@ -142,7 +144,7 @@ def choose_model(model):
     
 def do_pages():
     
-    while (check_next_arrow_exists() or check_left_arrow_exists()):   # Check that either the left or right nav arrow for pages exists
+    while (check_next_arrow_exists() or check_left_arrow_exists() or page_two_not_exists()):   # Check that either the left or right nav arrow for pages exists
         elements = driver.find_elements_by_class_name("navi1") #get all page number elements
         elements_unique = []  #create empty list for unique page numbers
         for element in elements:
@@ -154,6 +156,10 @@ def do_pages():
         # if not right arrow then add one to the page count run otherwise it ends one too early
         if (check_next_arrow_exists()):
             page_count_run = page_count_run - 1 # minus one to get rid of the end high number page
+        elif(page_count_run == 1):
+             page_count_run = 2   # this to stop bombing out on single page
+             
+            
           
         for i in range(1, page_count_run):
             # Get Rows Data!
@@ -188,7 +194,12 @@ def check_navi_dots(): # Check for BOTH navi dots
         return True 
     except:
         return False 
-
+def page_two_not_exists():
+    try:
+        driver.find_element_by_xpath("//*[@class='navi1'][text()='2']")
+        return False
+    except:
+        return True
 def get_row_data():
     # Find all aj elements(row elements) | also remember the not operator to ditch the header row aj_view00!    
     row_elements = driver.find_elements_by_xpath("//tr[contains(@id, 'aj_view')][not(contains(@id, 'aj_view00'))]")
